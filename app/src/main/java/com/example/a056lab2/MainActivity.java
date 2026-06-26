@@ -33,10 +33,32 @@ public class MainActivity extends AppCompatActivity {
         Boolean isFriend = true;
         Log .i("This is friend=",""+isFriend);
 
-        String contact = "Gus" ;
-        String message = "I Love AIMMY" ;
+        String contact = "AIMMY" ;
+        String message = "I Love GUS" ;
 
         Toast.makeText(this,"Message from "+contact,Toast.LENGTH_SHORT).show();
         Toast.makeText(this,"Message is "+message,Toast.LENGTH_SHORT).show();
+
+        Log.i("message:","In countUp method");
+        int x = 0;
+        // Now an apparently infinite while loop
+        while(true){
+            x++;//Add 1 to x each time
+            Log.i("x =",""+x);//print x
+            if(x == 3){
+                break;//Get me out of here
+            }
+        }
+        String mess =   joinThese("Method","are","cool");
+        Log.i("message=",mess);
+        float area = getAreaCircle(5f);
+        Log.i("area=",""+area);
+
     }
+   String joinThese(String a,String b,String c){
+        return a+b+c;
+   }
+   float getAreaCircle(float radius){
+        return 3.14f*radius*radius;
+   }
 }
